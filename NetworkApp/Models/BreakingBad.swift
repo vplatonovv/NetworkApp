@@ -14,11 +14,3 @@ struct BreakingBadCharacters: Decodable {
     let status: String
     let nickname: String
 }
-
-struct BreakingBadEpisodes: Decodable {
-    let title: String
-    let season: String
-    let air_date: String
-    let characters: [String]
-    let episode: String
-}

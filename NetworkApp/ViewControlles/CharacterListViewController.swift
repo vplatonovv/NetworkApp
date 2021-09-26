@@ -9,13 +9,14 @@ import UIKit
 
 class CharacterListViewController: UIViewController {
     
-    var characters: [BreakingBadCharacters] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    var characters: [BreakingBadCharacters] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        requestCharacets()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailViewController else { return }
@@ -23,6 +24,24 @@ class CharacterListViewController: UIViewController {
         detailVC.breakingBad = characters[indexPath.row]
     }
     
+    private func requestCharacets() {
+        guard let url = URL(string: "https://www.breakingbadapi.com/api/characters") else { return }
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "error not found")
+                return
+            }
+            do {
+                let json = try JSONDecoder().decode([BreakingBadCharacters].self, from: data)
+                DispatchQueue.main.async {
+                    self.characters = json
+                    self.tableView.reloadData()
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
 }
 
 extension CharacterListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -37,10 +56,8 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let list = characters.map { $0.name }
-        let secondList = characters.map { $0.nickname }
-        let breakingOne = list[indexPath.row]
-        let breakingTwo = secondList[indexPath.row]
+        let breakingOne = characters.map { $0.name }[indexPath.row]
+        let breakingTwo = characters.map { $0.nickname }[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = breakingOne
         content.secondaryText = breakingTwo

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Characters-->
+        <!--Breaking Bad-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CharacterListViewController" customModule="NetworkApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zaT-fB-5TN">
-                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" systemColor="labelColor"/>
                                 <prototypes>
@@ -49,7 +49,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Characters" image="person.fill" catalog="system" id="0gE-bD-TRL"/>
-                    <navigationItem key="navigationItem" id="fHS-D2-WLO"/>
+                    <navigationItem key="navigationItem" title="Breaking Bad" id="fHS-D2-WLO"/>
                     <connections>
                         <outlet property="tableView" destination="zaT-fB-5TN" id="azc-g7-2c6"/>
                     </connections>
@@ -57,22 +57,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2048" y="60"/>
-        </scene>
-        <!--Episodes-->
-        <scene sceneID="mfz-zR-WI0">
-            <objects>
-                <viewController id="5GF-0O-vgg" customClass="EpisodesListViewController" customModule="NetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4IV-mw-Daz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="3JD-nr-csV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Episodes" image="video.fill" catalog="system" id="2oV-IT-mG2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YUV-e9-k05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2994" y="60"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="PXM-kM-7Cd">
@@ -84,7 +68,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVU-C7-g8w">
                                 <rect key="frame" x="20" y="101" width="280" height="23"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -133,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zu4-zg-D1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="892"/>
+            <point key="canvasLocation" x="3030" y="59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DFF-TO-bk9">
@@ -146,37 +130,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vho-O2-jk2" kind="relationship" relationship="rootViewController" id="2CA-HX-Nw0"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KeQ-0u-55O"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db0-ee-Yvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="60.9375"/>
-        </scene>
-        <!--Breaking Bad-->
-        <scene sceneID="ArD-V8-Xrj">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vho-O2-jk2" customClass="TabBarViewController" customModule="NetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Breaking Bad" id="eRT-Cb-lIe"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iTt-IK-b9c">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="z9E-ex-XPT"/>
-                        <segue destination="5GF-0O-vgg" kind="relationship" relationship="viewControllers" id="bLS-Tr-pel"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wjH-63-3mB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1038.75" y="60.2112676056338"/>
+            <point key="canvasLocation" x="1093" y="59"/>
         </scene>
     </scenes>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="video.fill" catalog="system" width="128" height="82"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

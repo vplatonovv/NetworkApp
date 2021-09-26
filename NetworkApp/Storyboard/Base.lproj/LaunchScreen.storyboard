@@ -15,34 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking Bad Characters" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UG-vo-FEn">
-                                <rect key="frame" x="107" y="69" width="200" height="144"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="8aG-vS-nix"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember your favorite characters!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrB-kl-ogu">
-                                <rect key="frame" x="69.5" y="303" width="275" height="60.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="ylk-QH-zsE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ZrB-kl-ogu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6SR-7o-2xw"/>
-                            <constraint firstItem="ZrB-kl-ogu" firstAttribute="top" secondItem="6UG-vo-FEn" secondAttribute="bottom" constant="90" id="ZXZ-ea-zGU"/>
-                            <constraint firstItem="6UG-vo-FEn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="b4a-Xw-6od"/>
-                            <constraint firstItem="6UG-vo-FEn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gc1-zA-bTh"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

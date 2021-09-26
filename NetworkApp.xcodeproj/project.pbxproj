@@ -14,9 +14,7 @@
 		95498D3C26FE5AAB00FA1224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95498D3B26FE5AAB00FA1224 /* Assets.xcassets */; };
 		95498D3F26FE5AAB00FA1224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95498D3D26FE5AAB00FA1224 /* LaunchScreen.storyboard */; };
 		95498D4726FE67BF00FA1224 /* BreakingBad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95498D4626FE67BF00FA1224 /* BreakingBad.swift */; };
-		95C3A32326FF7793008F0269 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C3A32226FF7793008F0269 /* TabBarViewController.swift */; };
 		95C9894F26FF2719007730FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C9894E26FF2719007730FC /* DetailViewController.swift */; };
-		95DAB71426FF7FC900CCB126 /* EpisodesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB71326FF7FC900CCB126 /* EpisodesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +27,7 @@
 		95498D3E26FE5AAB00FA1224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95498D4026FE5AAB00FA1224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95498D4626FE67BF00FA1224 /* BreakingBad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBad.swift; sourceTree = "<group>"; };
-		95C3A32226FF7793008F0269 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		95C9894E26FF2719007730FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		95DAB71326FF7FC900CCB126 /* EpisodesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				95498D3626FE5AA900FA1224 /* CharacterListViewController.swift */,
-				95C3A32226FF7793008F0269 /* TabBarViewController.swift */,
-				95DAB71326FF7FC900CCB126 /* EpisodesListViewController.swift */,
 				95C9894E26FF2719007730FC /* DetailViewController.swift */,
 			);
 			path = ViewControlles;
@@ -186,8 +180,6 @@
 				95498D3326FE5AA900FA1224 /* AppDelegate.swift in Sources */,
 				95C9894F26FF2719007730FC /* DetailViewController.swift in Sources */,
 				95498D4726FE67BF00FA1224 /* BreakingBad.swift in Sources */,
-				95DAB71426FF7FC900CCB126 /* EpisodesListViewController.swift in Sources */,
-				95C3A32326FF7793008F0269 /* TabBarViewController.swift in Sources */,
 				95498D3526FE5AA900FA1224 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
