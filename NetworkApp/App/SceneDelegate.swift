@@ -18,10 +18,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let flowLayout = UICollectionViewFlowLayout()
         let episodesVc = EpisodesViewController(collectionViewLayout: flowLayout)
 
-        let tabBarVc = UITabBarController()
+        let tabBarVc = TabBarController()
         tabBarVc.setViewControllers([charactercVc, episodesVc], animated: false)
         navigation = UINavigationController(rootViewController: tabBarVc)
         navigation.navigationBar.prefersLargeTitles = true
+        
+        if let controllers = tabBarVc.viewControllers {
+            for vc in controllers {
+                if vc == controllers.first {
+                    vc.tabBarItem.title = "Characters"
+                    vc.tabBarItem.image = UIImage(systemName: "person.fill")
+                } else if vc == controllers.last {
+                    vc.tabBarItem.title = "Episodes"
+                    vc.tabBarItem.image = UIImage(systemName: "video.fill")
+                }
+            }
+        }
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         

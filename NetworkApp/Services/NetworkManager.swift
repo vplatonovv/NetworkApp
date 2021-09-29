@@ -50,4 +50,31 @@ class NetworkManager {
         guard let imageURL = URL(string: stringURL) else { return nil }
         return try? Data(contentsOf: imageURL)
     }
+    
+    func fetchDataWithAlamofire(url: String, complition: @escaping(Result<[BreakingBadEpisodes], NetworkError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    guard let json = value as? [[String: Any]] else { return }
+                    var episodes: [BreakingBadEpisodes] = []
+                    for model in json {
+                        let episode = BreakingBadEpisodes(
+                            title: model["title"] as? String,
+                            season: model["season"] as? String,
+                            airDate: model["air_date"] as? String,
+                            characters: model["characters"] as? [String],
+                            episode: model["episode"] as? String
+                        )
+                        episodes.append(episode)
+                    }
+                    DispatchQueue.main.async {
+                        complition(.success(episodes))
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+    }
 }

@@ -29,7 +29,6 @@ class DetailEpisodeViewController: UIViewController {
     }
     
     private func configureLabel() {
-        label.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 20)
         view.addSubview(label)
@@ -39,6 +38,6 @@ class DetailEpisodeViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        label.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 300).isActive = true
     }
 }

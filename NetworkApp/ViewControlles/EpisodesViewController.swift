@@ -16,38 +16,25 @@ class EpisodesViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarItem.title = "Episodes"
-        tabBarItem.image = UIImage(systemName: "video.fill")
+//        tabBarItem.title = "Episodes"
+//        tabBarItem.image = UIImage(systemName: "video.fill")
         self.collectionView!.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        fetchDataWithAlamofire()
-        collectionView.backgroundColor = .white
+        requestEpisodesWithAlamofire()
     }
     
-    func fetchDataWithAlamofire() {
-        AF.request(Links.episodes.rawValue)
-            .validate()
-            .responseJSON { dataResponse in
-                switch dataResponse.result {
-                case .success(let value):
-                    guard let json = value as? [[String: Any]] else { return }
-                    for model in json {
-                        let episode = BreakingBadEpisodes(
-                            title: model["title"] as? String,
-                            season: model["season"] as? String,
-                            airDate: model["air_date"] as? String,
-                            characters: model["characters"] as? [String],
-                            episode: model["episode"] as? String
-                        )
-                        self.episodes.append(episode)
-                    }
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                case .failure(let error):
-                    print(error)
-                }
+    private func requestEpisodesWithAlamofire() {
+        NetworkManager.shared.fetchDataWithAlamofire(url: Links.episodes.rawValue) { result in
+            switch result {
+            case .success(let episodes):
+                self.episodes = episodes
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
             }
+        }
     }
+    
+    
 
 
     // MARK: UICollectionViewDataSource
