@@ -38,16 +38,16 @@ class EpisodesViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        episodes.count
+        BreakingBadEpisodes.getSeasons(seasons: episodes).count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
-        let episode = episodes.map{ $0.episode }[indexPath.item]
-        let season = episodes.map { $0.season }[indexPath.item]
+        let season = BreakingBadEpisodes.getSeasons(seasons: episodes)[indexPath.item]
+        let image = seasonImages[indexPath.item]
         cell.backgroundColor = .lightGray
         cell.layer.cornerRadius = 20
-        cell.infoLabel.text = "Season: \(season ?? ""), episode: \(episode ?? "")"
+        cell.configureCell(with: "Season: \(season)", image: image)
         return cell
     }
     
@@ -65,5 +65,13 @@ class EpisodesViewController: UICollectionViewController {
 extension EpisodesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 48, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 20, left: 20, bottom: 40, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        30
     }
 }
