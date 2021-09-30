@@ -13,8 +13,6 @@ class CharactersViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tabBarItem.title = "Characters"
-//        tabBarItem.image = UIImage(systemName: "person.fill")
         requestCharacets()
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 80

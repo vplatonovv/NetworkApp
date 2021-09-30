@@ -19,6 +19,8 @@ enum NetworkError: Error {
     case decodingError
 }
 
+// MARK: URLSession
+
 class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
@@ -50,6 +52,8 @@ class NetworkManager {
         guard let imageURL = URL(string: stringURL) else { return nil }
         return try? Data(contentsOf: imageURL)
     }
+    
+    // MARK: Alamofire
     
     func fetchDataWithAlamofire(url: String, complition: @escaping(Result<[BreakingBadEpisodes], NetworkError>) -> Void) {
         AF.request(url)

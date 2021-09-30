@@ -8,12 +8,12 @@
 import UIKit
 
 class DetailEpisodeViewController: UIViewController {
-
+    
     var characters: [String]!
     private var label = UILabel()
     private var tableView = UITableView(frame: CGRect(), style: .plain)
     private var imageView = UIImageView(image: UIImage(named: "logo"))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLabel()
@@ -28,6 +28,8 @@ class DetailEpisodeViewController: UIViewController {
     func configureDetail(with episode: BreakingBadEpisodes) {
         label.text = "Title: \(episode.title ?? ""), season: \(episode.season ?? ""), episode: \(episode.episode ?? ""), air date: \(episode.airDate ?? "")"
     }
+    
+    // MARK: Configure UI elements
     
     private func configureImage() {
         imageView.contentMode = .scaleToFill
@@ -51,6 +53,8 @@ class DetailEpisodeViewController: UIViewController {
         tableView.largeContentTitle = "Characters"
         view.addSubview(tableView)
     }
+    
+    // MARK: Setup constrains
     
     private func setConstrainsLabel() {
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -77,6 +81,8 @@ class DetailEpisodeViewController: UIViewController {
     }
 }
 
+// MARK: UITableViewDelegate, UITableViewDataSource
+
 extension DetailEpisodeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -101,5 +107,4 @@ extension DetailEpisodeViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "Names"
     }
-    
 }

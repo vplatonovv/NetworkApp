@@ -42,6 +42,8 @@ class DetailViewController: UIViewController {
         }
     }
     
+    // MARK: Configure UI elements
+    
     private func configeruNameLabel() {
         let labelFrame = CGRect(x: 0, y: 0, width: 200, height: 50)
         nameLabel.frame = labelFrame
@@ -54,12 +56,6 @@ class DetailViewController: UIViewController {
         view.addSubview(nameLabel)
     }
     
-    private func setConstrainsIndicator() {
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.centerXAnchor.constraint(equalTo: imageCharacter.centerXAnchor).isActive = true
-        activityIndicator.centerYAnchor.constraint(equalTo: imageCharacter.centerYAnchor).isActive = true
-    }
-    
     private func configureImageView() {
         imageCharacter.contentMode = .scaleToFill
         imageCharacter.clipsToBounds = true
@@ -68,6 +64,14 @@ class DetailViewController: UIViewController {
         imageCharacter.layer.borderColor = UIColor.black.cgColor
         imageCharacter.addSubview(activityIndicator)
         view.addSubview(imageCharacter)
+    }
+    
+    // MARK: Setup constrains
+    
+    private func setConstrainsIndicator() {
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: imageCharacter.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: imageCharacter.centerYAnchor).isActive = true
     }
     
     private func setLabelConstrains() {

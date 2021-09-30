@@ -21,12 +21,4 @@ struct BreakingBadEpisodes: Decodable {
     let airDate: String?
     let characters: [String]?
     let episode: String?
-    
-//    init(episodes: [String: Any]) {
-//        title = episodes["title"] as? String
-//        season = episodes["season"] as? String
-//        airDate = episodes["air_date"] as? String
-//        characters = [episodes["characters"]] as? [String] // probably here error
-//        episode = episodes["episode"] as? String
-//    }
 }

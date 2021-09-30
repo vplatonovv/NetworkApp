@@ -12,7 +12,7 @@ class TableViewCell: UITableViewCell {
     private var imageCharacter = UIImageView()
     private var nameLabel = UILabel()
     private var nicknameLabel = UILabel()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(imageCharacter)
@@ -20,7 +20,7 @@ class TableViewCell: UITableViewCell {
         addSubview(nicknameLabel)
         
         configureImage()
-        configureNameLabel()
+        configureLabels()
         setImageConstrains()
         setNameLabelConstrains()
         setNicknameLabelConstrains()
@@ -44,15 +44,16 @@ class TableViewCell: UITableViewCell {
                 self.imageCharacter.image = UIImage(data: data)
             }
         }
-        
     }
+    
+    // MARK: Configure UI elements
     
     private func configureImage() {
         imageCharacter.contentMode = .scaleToFill
         imageCharacter.clipsToBounds = true
     }
     
-    private func configureNameLabel() {
+    private func configureLabels() {
         nameLabel.numberOfLines = 1
         nameLabel.font = UIFont.boldSystemFont(ofSize: 16.5)
         nameLabel.adjustsFontSizeToFitWidth = true
@@ -62,6 +63,8 @@ class TableViewCell: UITableViewCell {
         nicknameLabel.textColor = .lightGray
         nicknameLabel.adjustsFontSizeToFitWidth = true
     }
+    
+    // MARK: Setup constrains
     
     private func setImageConstrains() {
         imageCharacter.translatesAutoresizingMaskIntoConstraints = false
