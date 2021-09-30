@@ -7,6 +7,8 @@ Simple network app
 
 Приложение содержит:
 - MVC
+- CollectionView
+- TableView
 - URLSession
 - Alamofire
 - Singleton (использутеся для сетевого слоя)
