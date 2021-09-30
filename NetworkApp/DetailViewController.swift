@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
         setLabelConstrains()
         setImageConstrains()
         setConstrainsIndicator()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
     }
     
     func configureDetail(with character: BreakingBadCharacters) {
@@ -49,7 +49,6 @@ class DetailViewController: UIViewController {
         nameLabel.font = UIFont.boldSystemFont(ofSize: 18.5)
         nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.sizeToFit()
-        nameLabel.textColor = UIColor.black
         nameLabel.shadowColor = UIColor.lightGray
         nameLabel.shadowOffset = CGSize(width: 2, height: 2)
         view.addSubview(nameLabel)

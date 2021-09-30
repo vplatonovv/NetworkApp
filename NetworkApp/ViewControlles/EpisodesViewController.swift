@@ -16,8 +16,6 @@ class EpisodesViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tabBarItem.title = "Episodes"
-//        tabBarItem.image = UIImage(systemName: "video.fill")
         self.collectionView!.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         requestEpisodesWithAlamofire()
     }
@@ -66,6 +64,7 @@ class EpisodesViewController: UICollectionViewController {
         let episode = episodes[indexPath.item]
         let detailEpisodeVc = DetailEpisodeViewController()
         detailEpisodeVc.configureDetail(with: episode)
+        detailEpisodeVc.characters = episode.characters
         navigationController?.pushViewController(detailEpisodeVc, animated: true)
     }
   

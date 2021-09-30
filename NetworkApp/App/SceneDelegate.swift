@@ -18,10 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let flowLayout = UICollectionViewFlowLayout()
         let episodesVc = EpisodesViewController(collectionViewLayout: flowLayout)
 
-        let tabBarVc = TabBarController()
+        let tabBarVc = UITabBarController()
         tabBarVc.setViewControllers([charactercVc, episodesVc], animated: false)
         navigation = UINavigationController(rootViewController: tabBarVc)
         navigation.navigationBar.prefersLargeTitles = true
+        tabBarVc.title = "Breaking Bad"
         
         if let controllers = tabBarVc.viewControllers {
             for vc in controllers {
