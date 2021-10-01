@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let charactercVc = CharactersViewController()
         let flowLayout = UICollectionViewFlowLayout()
-        let episodesVc = EpisodesViewController(collectionViewLayout: flowLayout)
+        let episodesVc = SeasonsViewController(collectionViewLayout: flowLayout)
         
         let tabBarVc = UITabBarController()
         tabBarVc.setViewControllers([charactercVc, episodesVc], animated: false)

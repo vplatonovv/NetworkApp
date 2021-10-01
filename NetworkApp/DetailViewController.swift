@@ -10,18 +10,14 @@ import UIKit
 class DetailViewController: UIViewController {
     
     private var nameLabel = UILabel()
-    private var imageCharacter = UIImageView()
-    private var activityIndicator = UIActivityIndicatorView(style: .medium)
+    private var imageCharacter = CharacterImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.startAnimating()
-        activityIndicator.hidesWhenStopped = true
         configeruNameLabel()
         configureImageView()
         setLabelConstrains()
         setImageConstrains()
-        setConstrainsIndicator()
         view.backgroundColor = .systemBackground
     }
     
@@ -33,13 +29,7 @@ class DetailViewController: UIViewController {
     Birthday: \(character.birthday)
     Status: \(character.status)
     """
-        DispatchQueue.global().async {
-            guard let imageData = NetworkManager.shared.fetchImage(from: character.img) else { return }
-            DispatchQueue.main.async {
-                self.activityIndicator.stopAnimating()
-                self.imageCharacter.image = UIImage(data: imageData)
-            }
-        }
+        imageCharacter.fetchImage(from: character.img)
     }
     
     // MARK: Configure UI elements
@@ -62,17 +52,10 @@ class DetailViewController: UIViewController {
         imageCharacter.layer.cornerRadius = 20
         imageCharacter.layer.borderWidth = 2
         imageCharacter.layer.borderColor = UIColor.black.cgColor
-        imageCharacter.addSubview(activityIndicator)
         view.addSubview(imageCharacter)
     }
     
     // MARK: Setup constrains
-    
-    private func setConstrainsIndicator() {
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.centerXAnchor.constraint(equalTo: imageCharacter.centerXAnchor).isActive = true
-        activityIndicator.centerYAnchor.constraint(equalTo: imageCharacter.centerYAnchor).isActive = true
-    }
     
     private func setLabelConstrains() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false

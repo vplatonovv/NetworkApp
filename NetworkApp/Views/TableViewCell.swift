@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    private var imageCharacter = UIImageView()
+    private var imageCharacter = CharacterImageView()
     private var nameLabel = UILabel()
     private var nicknameLabel = UILabel()
     
@@ -38,12 +38,7 @@ class TableViewCell: UITableViewCell {
     func setCharacter(character: BreakingBadCharacters) {
         nameLabel.text = character.name
         nicknameLabel.text = character.nickname
-        DispatchQueue.global().async {
-            guard let data = NetworkManager.shared.fetchImage(from: character.img) else { return }
-            DispatchQueue.main.async {
-                self.imageCharacter.image = UIImage(data: data)
-            }
-        }
+        imageCharacter.fetchImage(from: character.img)
     }
     
     // MARK: Configure UI elements
