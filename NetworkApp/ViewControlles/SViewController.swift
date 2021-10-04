@@ -9,7 +9,7 @@ import UIKit
 
 class SViewController: UIViewController {
     
-    var collectionView: UICollectionView!
+    private var collectionView: UICollectionView!
     
     private var seasons: [BreakingBadEpisodes] = []
 
@@ -18,7 +18,6 @@ class SViewController: UIViewController {
         view.backgroundColor = . systemBackground
         configaureCollection()
         requestEpisodesWithAlamofire()
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
         
     private func configaureCollection() {

@@ -16,7 +16,6 @@ class CharactersViewController: UITableViewController {
         requestCharacets()
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 80
-        tableView.backgroundView?.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
     
     private func requestCharacets() {
