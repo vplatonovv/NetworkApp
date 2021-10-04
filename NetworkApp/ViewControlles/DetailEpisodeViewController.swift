@@ -22,6 +22,7 @@ class DetailEpisodeViewController: UIViewController {
         setConstrainsTable()
         configureImage()
         setConstrainsImage()
+        view.backgroundColor = .systemBackground
     }
     
     func configureDetail(with episode: BreakingBadEpisodes) {
@@ -103,9 +104,5 @@ extension DetailEpisodeViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "Characters"
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

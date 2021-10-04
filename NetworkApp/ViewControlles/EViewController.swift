@@ -18,6 +18,7 @@ class EViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = . systemBackground
         configaureCollection()
+        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
     
     private func configaureCollection() {

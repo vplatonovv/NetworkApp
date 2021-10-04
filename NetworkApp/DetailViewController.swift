@@ -19,6 +19,7 @@ class DetailViewController: UIViewController {
         setLabelConstrains()
         setImageConstrains()
         view.backgroundColor = .systemBackground
+        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
     
     func configureDetail(with character: BreakingBadCharacters) {
