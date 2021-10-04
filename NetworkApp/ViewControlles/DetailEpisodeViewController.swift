@@ -9,7 +9,7 @@ import UIKit
 
 class DetailEpisodeViewController: UIViewController {
     
-    var characters: [String]!
+    var characters: [String] = []
     private var label = UILabel()
     private var tableView = UITableView(frame: CGRect(), style: .plain)
     private var imageView = UIImageView(image: UIImage(named: "logo"))
@@ -26,7 +26,7 @@ class DetailEpisodeViewController: UIViewController {
     }
     
     func configureDetail(with episode: BreakingBadEpisodes) {
-        label.text = "Title: \(episode.title ?? ""), season: \(episode.season ?? ""), episode: \(episode.episode ?? ""), air date: \(episode.airDate ?? "")"
+        label.text = "Title: \(episode.title), season: \(episode.season), episode: \(episode.episode), air date: \(episode.airDate)"
     }
     
     // MARK: Configure UI elements
@@ -50,7 +50,6 @@ class DetailEpisodeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "char")
-        tableView.largeContentTitle = "Characters"
         view.addSubview(tableView)
     }
     
@@ -77,7 +76,6 @@ class DetailEpisodeViewController: UIViewController {
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: view.frame.height / 4).isActive = true
-        //imageView.widthAnchor.constraint(equalToConstant: view.frame.width / 2).isActive = true
     }
 }
 
@@ -105,6 +103,10 @@ extension DetailEpisodeViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "Names"
+        "Characters"
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

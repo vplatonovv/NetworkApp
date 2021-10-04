@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		951AACC427072020009C0797 /* CharacterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951AACC327072020009C0797 /* CharacterImageView.swift */; };
-		951AACC627072240009C0797 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951AACC527072240009C0797 /* EpisodesViewController.swift */; };
+		951AACC827073CCD009C0797 /* EpisodesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951AACC727073CCD009C0797 /* EpisodesCell.swift */; };
 		953DF52A2704282D00EDF1BF /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DF5292704282D00EDF1BF /* CharactersViewController.swift */; };
 		953DF52C2704324700EDF1BF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DF52B2704324700EDF1BF /* NetworkManager.swift */; };
 		953DF5312704444100EDF1BF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DF5302704444100EDF1BF /* TableViewCell.swift */; };
@@ -18,9 +18,10 @@
 		95498D3C26FE5AAB00FA1224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95498D3B26FE5AAB00FA1224 /* Assets.xcassets */; };
 		95498D3F26FE5AAB00FA1224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95498D3D26FE5AAB00FA1224 /* LaunchScreen.storyboard */; };
 		95498D4726FE67BF00FA1224 /* BreakingBad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95498D4626FE67BF00FA1224 /* BreakingBad.swift */; };
-		95C01A982704C6E40035F6C9 /* SeasonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C01A972704C6E40035F6C9 /* SeasonsViewController.swift */; };
+		9576320F270A48CF002F6257 /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576320E270A48CF002F6257 /* SViewController.swift */; };
+		95763211270A48DA002F6257 /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95763210270A48DA002F6257 /* EViewController.swift */; };
 		95C01A9C2704D72D0035F6C9 /* DetailEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C01A9B2704D72D0035F6C9 /* DetailEpisodeViewController.swift */; };
-		95C01A9E2704DA5A0035F6C9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C01A9D2704DA5A0035F6C9 /* CollectionViewCell.swift */; };
+		95C01A9E2704DA5A0035F6C9 /* SeasonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C01A9D2704DA5A0035F6C9 /* SeasonsCell.swift */; };
 		F31BFBD60F893F6854B05EE2 /* Pods_NetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F269A5E94F02AF49AAF8C8F /* Pods_NetworkApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +30,7 @@
 		4169C278BFCAFE66CDA2A063 /* Pods-NetworkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkApp.debug.xcconfig"; path = "Target Support Files/Pods-NetworkApp/Pods-NetworkApp.debug.xcconfig"; sourceTree = "<group>"; };
 		666E96DF50B8BF0263BEB201 /* Pods-NetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkApp.release.xcconfig"; path = "Target Support Files/Pods-NetworkApp/Pods-NetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 		951AACC327072020009C0797 /* CharacterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageView.swift; sourceTree = "<group>"; };
-		951AACC527072240009C0797 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		951AACC727073CCD009C0797 /* EpisodesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCell.swift; sourceTree = "<group>"; };
 		953DF5292704282D00EDF1BF /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		953DF52B2704324700EDF1BF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		953DF5302704444100EDF1BF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -41,9 +42,10 @@
 		95498D3E26FE5AAB00FA1224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95498D4026FE5AAB00FA1224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95498D4626FE67BF00FA1224 /* BreakingBad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBad.swift; sourceTree = "<group>"; };
-		95C01A972704C6E40035F6C9 /* SeasonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsViewController.swift; sourceTree = "<group>"; };
+		9576320E270A48CF002F6257 /* SViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SViewController.swift; sourceTree = "<group>"; };
+		95763210270A48DA002F6257 /* EViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
 		95C01A9B2704D72D0035F6C9 /* DetailEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEpisodeViewController.swift; sourceTree = "<group>"; };
-		95C01A9D2704DA5A0035F6C9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		95C01A9D2704DA5A0035F6C9 /* SeasonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				953DF5302704444100EDF1BF /* TableViewCell.swift */,
-				95C01A9D2704DA5A0035F6C9 /* CollectionViewCell.swift */,
+				95C01A9D2704DA5A0035F6C9 /* SeasonsCell.swift */,
+				951AACC727073CCD009C0797 /* EpisodesCell.swift */,
 				951AACC327072020009C0797 /* CharacterImageView.swift */,
 			);
 			path = Views;
@@ -122,8 +125,8 @@
 			children = (
 				953DF5292704282D00EDF1BF /* CharactersViewController.swift */,
 				953DF5352704522900EDF1BF /* DetailViewController.swift */,
-				95C01A972704C6E40035F6C9 /* SeasonsViewController.swift */,
-				951AACC527072240009C0797 /* EpisodesViewController.swift */,
+				9576320E270A48CF002F6257 /* SViewController.swift */,
+				95763210270A48DA002F6257 /* EViewController.swift */,
 				95C01A9B2704D72D0035F6C9 /* DetailEpisodeViewController.swift */,
 			);
 			path = ViewControlles;
@@ -277,14 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				951AACC627072240009C0797 /* EpisodesViewController.swift in Sources */,
-				95C01A9E2704DA5A0035F6C9 /* CollectionViewCell.swift in Sources */,
+				95C01A9E2704DA5A0035F6C9 /* SeasonsCell.swift in Sources */,
+				951AACC827073CCD009C0797 /* EpisodesCell.swift in Sources */,
 				95C01A9C2704D72D0035F6C9 /* DetailEpisodeViewController.swift in Sources */,
 				953DF52C2704324700EDF1BF /* NetworkManager.swift in Sources */,
 				953DF52A2704282D00EDF1BF /* CharactersViewController.swift in Sources */,
+				9576320F270A48CF002F6257 /* SViewController.swift in Sources */,
 				951AACC427072020009C0797 /* CharacterImageView.swift in Sources */,
-				95C01A982704C6E40035F6C9 /* SeasonsViewController.swift in Sources */,
 				95498D3326FE5AA900FA1224 /* AppDelegate.swift in Sources */,
+				95763211270A48DA002F6257 /* EViewController.swift in Sources */,
 				95498D4726FE67BF00FA1224 /* BreakingBad.swift in Sources */,
 				953DF5312704444100EDF1BF /* TableViewCell.swift in Sources */,
 				95498D3526FE5AA900FA1224 /* SceneDelegate.swift in Sources */,
@@ -438,6 +442,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +472,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -72,11 +72,11 @@ class NetworkManager {
                     var episodes: [BreakingBadEpisodes] = []
                     for model in json {
                         let episode = BreakingBadEpisodes(
-                            title: model["title"] as? String,
-                            season: model["season"] as? String,
-                            airDate: model["air_date"] as? String,
-                            characters: model["characters"] as? [String],
-                            episode: model["episode"] as? String
+                            title: model["title"] as! String,
+                            season: model["season"] as! String,
+                            airDate: model["air_date"] as! String,
+                            characters: model["characters"] as! [String],
+                            episode: model["episode"] as! String
                         )
                         episodes.append(episode)
                     }

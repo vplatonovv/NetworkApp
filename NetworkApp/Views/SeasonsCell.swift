@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class SeasonsCell: UICollectionViewCell {
     
     var infoLabel = UILabel()
     var imageSeason = UIImageView()
@@ -35,7 +35,6 @@ class CollectionViewCell: UICollectionViewCell {
         imageSeason.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         imageSeason.contentMode = .scaleToFill
         imageSeason.clipsToBounds = true
-        imageSeason.image = UIImage(named: seasonImages[0])
         imageSeason.layer.cornerRadius = 20
         imageSeason.alpha = 0.8
     }

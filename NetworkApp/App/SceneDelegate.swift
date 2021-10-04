@@ -15,11 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         let charactercVc = CharactersViewController()
-        let flowLayout = UICollectionViewFlowLayout()
-        let episodesVc = SeasonsViewController(collectionViewLayout: flowLayout)
+        let seasonsVc = SViewController()
         
         let tabBarVc = UITabBarController()
-        tabBarVc.setViewControllers([charactercVc, episodesVc], animated: false)
+        tabBarVc.setViewControllers([charactercVc, seasonsVc], animated: false)
         navigation = UINavigationController(rootViewController: tabBarVc)
         navigation.navigationBar.prefersLargeTitles = true
         tabBarVc.title = "Breaking Bad"
