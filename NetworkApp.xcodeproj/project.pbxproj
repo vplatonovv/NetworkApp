@@ -115,6 +115,7 @@
 				953DF5322704445000EDF1BF /* Views */,
 				95DAB71626FF809D00CCB126 /* Models */,
 				953DF52D2704324F00EDF1BF /* Services */,
+				95EDC518270B06D80083124B /* Extension */,
 				95DAB71726FF80A300CCB126 /* Storyboard */,
 				95498D3B26FE5AAB00FA1224 /* Assets.xcassets */,
 				95498D4026FE5AAB00FA1224 /* Info.plist */,
@@ -153,7 +154,6 @@
 		95DAB71826FF80B600CCB126 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				95EDC518270B06D80083124B /* Extension */,
 				95498D3226FE5AA900FA1224 /* AppDelegate.swift */,
 				95498D3426FE5AA900FA1224 /* SceneDelegate.swift */,
 			);
