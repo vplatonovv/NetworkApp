@@ -14,6 +14,6 @@ Simple network app
 - Singleton (использутеся для сетевого слоя)
 - верстка кодом
 
-![Image alt](https://github.com/viacheslavplatonov/NetworkApp/raw/main/NetworkApp.gif)
+![Image alt](https://github.com/viacheslavplatonov/NetworkApp/raw/main/Example.gif)
 
 Проект тестовый, будет периодически обновляться пока это возможно.
