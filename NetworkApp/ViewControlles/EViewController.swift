@@ -9,9 +9,8 @@ import UIKit
 
 class EViewController: UIViewController {
     
-    var collectionView: UICollectionView?
+    var collectionView: UICollectionView!
     
-    var characters: [BreakingBadCharacters] = []
     var seasons: [BreakingBadEpisodes] = []
     var imageSeason: String!
     
@@ -28,11 +27,11 @@ class EViewController: UIViewController {
         layout.minimumLineSpacing = 30
         
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-        collectionView!.register(EpisodesCell.self, forCellWithReuseIdentifier: "episode")
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
+        collectionView.register(EpisodesCell.self, forCellWithReuseIdentifier: "episode")
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
-        view.addSubview(collectionView ??  UICollectionView())
+        view.addSubview(collectionView)
     }
 }
 

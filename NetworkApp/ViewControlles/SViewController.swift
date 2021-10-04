@@ -9,7 +9,7 @@ import UIKit
 
 class SViewController: UIViewController {
     
-    var collectionView: UICollectionView?
+    var collectionView: UICollectionView!
     
     private var seasons: [BreakingBadEpisodes] = []
 
@@ -19,7 +19,7 @@ class SViewController: UIViewController {
         configaureCollection()
         requestEpisodesWithAlamofire()
     }
-    
+        
     private func configaureCollection() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 40, right: 20)
@@ -27,11 +27,11 @@ class SViewController: UIViewController {
         layout.minimumLineSpacing = 30
         
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-        collectionView!.register(SeasonsCell.self, forCellWithReuseIdentifier: "season")
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
+        collectionView.register(SeasonsCell.self, forCellWithReuseIdentifier: "season")
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
-        view.addSubview(collectionView ??  UICollectionView())
+        view.addSubview(collectionView)
     }
     
     private func requestEpisodesWithAlamofire() {
@@ -39,7 +39,7 @@ class SViewController: UIViewController {
             switch result {
             case .success(let episodes):
                 self.seasons = episodes
-                self.collectionView?.reloadData()
+                self.collectionView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
             }

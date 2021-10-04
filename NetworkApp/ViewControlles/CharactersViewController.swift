@@ -16,7 +16,6 @@ class CharactersViewController: UITableViewController {
         requestCharacets()
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 80
-        
     }
     
     private func requestCharacets() {
@@ -25,9 +24,25 @@ class CharactersViewController: UITableViewController {
             case .success(let characters):
                 self.characters = characters
                 self.tableView.reloadData()
+                self.animateTableView()
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    private func animateTableView() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        let tableViewHeight = tableView.bounds.height
+        var delay: Double = 0
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+            UIView.animate(withDuration: 1.5, delay: delay * 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            })
+            delay += 1
         }
     }
 
