@@ -15,7 +15,6 @@ class CharactersViewController: UITableViewController {
         super.viewDidLoad()
         requestCharacets()
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.rowHeight = 80
     }
     
     private func requestCharacets() {
@@ -34,11 +33,11 @@ class CharactersViewController: UITableViewController {
     private func animateTableView() {
         tableView.reloadData()
         let cells = tableView.visibleCells
-        let tableViewHeight = tableView.bounds.height
+        let tableViewWidth = tableView.bounds.width
         var delay: Double = 0
         
         for cell in cells {
-            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+            cell.transform = CGAffineTransform(translationX: tableViewWidth, y: 0)
             UIView.animate(withDuration: 1.5, delay: delay * 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 cell.transform = CGAffineTransform.identity
             })
@@ -70,5 +69,9 @@ class CharactersViewController: UITableViewController {
         detailVC.configureDetail(with: character)
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
     }
 }
