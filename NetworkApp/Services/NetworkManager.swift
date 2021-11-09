@@ -5,8 +5,8 @@
 //  Created by Слава Платонов on 29.09.2021.
 //
 
-import Foundation
 import Alamofire
+import UIKit
 
 enum Links: String {
     case characters = "https://www.breakingbadapi.com/api/characters"
@@ -53,8 +53,9 @@ class NetworkManager {
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
-            guard url == response.url else { return }
             DispatchQueue.main.async {
+                print("URL: \(url)")
+                print("URL FROM RESPONSE: \(response.url!)")
                 completion(data, response)
             }
         }.resume()

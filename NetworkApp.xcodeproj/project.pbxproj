@@ -20,9 +20,11 @@
 		95498D4726FE67BF00FA1224 /* BreakingBad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95498D4626FE67BF00FA1224 /* BreakingBad.swift */; };
 		9576320F270A48CF002F6257 /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576320E270A48CF002F6257 /* SViewController.swift */; };
 		95763211270A48DA002F6257 /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95763210270A48DA002F6257 /* EViewController.swift */; };
+		9581698A2714230300EFB1B5 /* NetworkApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 958169882714230300EFB1B5 /* NetworkApp.xcdatamodeld */; };
+		9581698C2714237700EFB1B5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581698B2714237700EFB1B5 /* StorageManager.swift */; };
 		95C01A9C2704D72D0035F6C9 /* DetailEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C01A9B2704D72D0035F6C9 /* DetailEpisodeViewController.swift */; };
 		95C01A9E2704DA5A0035F6C9 /* SeasonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C01A9D2704DA5A0035F6C9 /* SeasonsCell.swift */; };
-		95EDC517270B02EB0083124B /* Ext UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDC516270B02EB0083124B /* Ext UIView.swift */; };
+		95EDC517270B02EB0083124B /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDC516270B02EB0083124B /* Extension + UIView.swift */; };
 		F31BFBD60F893F6854B05EE2 /* Pods_NetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F269A5E94F02AF49AAF8C8F /* Pods_NetworkApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +47,11 @@
 		95498D4626FE67BF00FA1224 /* BreakingBad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBad.swift; sourceTree = "<group>"; };
 		9576320E270A48CF002F6257 /* SViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SViewController.swift; sourceTree = "<group>"; };
 		95763210270A48DA002F6257 /* EViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
+		958169892714230300EFB1B5 /* Character.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Character.xcdatamodel; sourceTree = "<group>"; };
+		9581698B2714237700EFB1B5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageManager.swift; path = NetworkApp/ViewControlles/StorageManager.swift; sourceTree = SOURCE_ROOT; };
 		95C01A9B2704D72D0035F6C9 /* DetailEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEpisodeViewController.swift; sourceTree = "<group>"; };
 		95C01A9D2704DA5A0035F6C9 /* SeasonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsCell.swift; sourceTree = "<group>"; };
-		95EDC516270B02EB0083124B /* Ext UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext UIView.swift"; sourceTree = "<group>"; };
+		95EDC516270B02EB0083124B /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		953DF52D2704324F00EDF1BF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9581698B2714237700EFB1B5 /* StorageManager.swift */,
 				953DF52B2704324700EDF1BF /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -115,6 +120,7 @@
 				953DF5322704445000EDF1BF /* Views */,
 				95DAB71626FF809D00CCB126 /* Models */,
 				953DF52D2704324F00EDF1BF /* Services */,
+				958169882714230300EFB1B5 /* NetworkApp.xcdatamodeld */,
 				95EDC518270B06D80083124B /* Extension */,
 				95DAB71726FF80A300CCB126 /* Storyboard */,
 				95498D3B26FE5AAB00FA1224 /* Assets.xcassets */,
@@ -163,7 +169,7 @@
 		95EDC518270B06D80083124B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				95EDC516270B02EB0083124B /* Ext UIView.swift */,
+				95EDC516270B02EB0083124B /* Extension + UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -296,15 +302,17 @@
 				95C01A9C2704D72D0035F6C9 /* DetailEpisodeViewController.swift in Sources */,
 				953DF52C2704324700EDF1BF /* NetworkManager.swift in Sources */,
 				953DF52A2704282D00EDF1BF /* CharactersViewController.swift in Sources */,
-				95EDC517270B02EB0083124B /* Ext UIView.swift in Sources */,
+				95EDC517270B02EB0083124B /* Extension + UIView.swift in Sources */,
 				9576320F270A48CF002F6257 /* SViewController.swift in Sources */,
 				951AACC427072020009C0797 /* CharacterImageView.swift in Sources */,
 				95498D3326FE5AA900FA1224 /* AppDelegate.swift in Sources */,
 				95763211270A48DA002F6257 /* EViewController.swift in Sources */,
 				95498D4726FE67BF00FA1224 /* BreakingBad.swift in Sources */,
 				953DF5312704444100EDF1BF /* TableViewCell.swift in Sources */,
+				9581698A2714230300EFB1B5 /* NetworkApp.xcdatamodeld in Sources */,
 				95498D3526FE5AA900FA1224 /* SceneDelegate.swift in Sources */,
 				953DF5362704522900EDF1BF /* DetailViewController.swift in Sources */,
+				9581698C2714237700EFB1B5 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +528,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		958169882714230300EFB1B5 /* NetworkApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				958169892714230300EFB1B5 /* Character.xcdatamodel */,
+			);
+			currentVersion = 958169892714230300EFB1B5 /* Character.xcdatamodel */;
+			path = NetworkApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 95498D2726FE5AA900FA1224 /* Project object */;
 }

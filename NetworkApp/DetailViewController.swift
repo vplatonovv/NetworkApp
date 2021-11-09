@@ -22,15 +22,18 @@ class DetailViewController: UIViewController {
         view.addVerticalGradientLayer()
     }
     
-    func configureDetail(with character: BreakingBadCharacters) {
+    func configureCoreDataDetail(with character: Characters) {
         title = character.nickname
         nameLabel.text = """
-    Name: \(character.name)
-    Nickname: \(character.nickname)
-    Birthday: \(character.birthday)
-    Status: \(character.status)
+    Name: \(character.name ?? "")
+    Nickname: \(character.nickname ?? "")
+    Birthday: \(character.birthday ?? "")
+    Status: \(character.status ?? "")
     """
-        imageCharacter.fetchImage(from: character.img)
+        guard let url = URL(string: character.img ?? "") else { return }
+        NetworkManager.shared.fetchImage(from: url) { data, response in
+            self.imageCharacter.fetchImage(from: response.url!)
+        }
     }
     
     // MARK: Configure UI elements

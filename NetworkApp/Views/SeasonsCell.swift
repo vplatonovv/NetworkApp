@@ -31,6 +31,8 @@ class SeasonsCell: UICollectionViewCell {
         imageSeason.image = UIImage(named: image)
     }
     
+    // MARK: Configure UI elements
+    
     private func configureImage() {
         imageSeason.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         imageSeason.contentMode = .scaleToFill
@@ -47,6 +49,8 @@ class SeasonsCell: UICollectionViewCell {
         infoLabel.shadowColor = UIColor.lightGray
         infoLabel.shadowOffset = CGSize(width: 2, height: 2)
     }
+    
+    // MARK: Setup constrains
     
     private func setConstrainsInfoLabel() {
         infoLabel.translatesAutoresizingMaskIntoConstraints = false

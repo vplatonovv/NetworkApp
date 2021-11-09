@@ -35,10 +35,13 @@ class TableViewCell: UITableViewCell {
         imageCharacter.layer.cornerRadius = imageCharacter.frame.height / 2
     }
     
-    func setCharacter(character: BreakingBadCharacters) {
+    func setCoreDataCharacter(character: Characters) {
         nameLabel.text = character.name
         nicknameLabel.text = character.nickname
-        imageCharacter.fetchImage(from: character.img)
+        guard let url = URL(string: character.img ?? "") else { return }
+        NetworkManager.shared.fetchImage(from: url) { data, response in
+            self.imageCharacter.fetchImage(from: response.url!)
+        }
     }
     
     // MARK: Configure UI elements

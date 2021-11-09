@@ -12,14 +12,14 @@ class SViewController: UIViewController {
     private var collectionView: UICollectionView!
     
     private var seasons: [BreakingBadEpisodes] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = . systemBackground
         configaureCollection()
         requestEpisodesWithAlamofire()
     }
-        
+    
     private func configaureCollection() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 40, right: 20)
@@ -35,7 +35,7 @@ class SViewController: UIViewController {
     }
     
     private func requestEpisodesWithAlamofire() {
-        NetworkManager.shared.fetchDataWithAlamofire(url: Links.episodes.rawValue) { result in
+        NetworkManager.shared.fetchDataWithAlamofire(url: Links.episodes.rawValue) { [unowned self] result in
             switch result {
             case .success(let episodes):
                 self.seasons = episodes

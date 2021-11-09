@@ -15,11 +15,11 @@ struct BreakingBadCharacters: Decodable {
     let nickname: String
     
     static func gerCharacter(name: String, characters: [BreakingBadCharacters]) -> BreakingBadCharacters {
-        var result: BreakingBadCharacters?
+        var result: BreakingBadCharacters!
         for character in characters where character.name == name {
             result = character
         }
-        return result ?? BreakingBadCharacters(name: "error", birthday: "", img: "", status: "", nickname: "")
+        return result
     }
 }
 
@@ -29,6 +29,7 @@ struct BreakingBadEpisodes: Decodable {
     let airDate: String
     let characters: [String]
     let episode: String
+    
     // unique json
     static func getSeasons(seasons: [BreakingBadEpisodes]) -> [String] {
         var results: [String] = []

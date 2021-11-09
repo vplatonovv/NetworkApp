@@ -94,7 +94,9 @@ extension DetailEpisodeViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "char", for: indexPath)
         let character = characters[indexPath.row]
-        cell.textLabel?.text = character
+        var content = cell.defaultContentConfiguration()
+        content.text = character
+        cell.contentConfiguration = content
         return cell
     }
     

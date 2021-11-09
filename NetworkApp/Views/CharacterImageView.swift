@@ -8,25 +8,22 @@
 import UIKit
 
 class CharacterImageView: UIImageView {
-    func fetchImage(from url: String) {
-        guard let url = URL(string: url) else {
-            image = UIImage(systemName: "person")
-            return
-        }
+    func fetchImage(from url: URL) {
         
-        // form cache
+        // from cache
         if let cachedImage = getCachedImage(from: url) {
             image = cachedImage
+            print("IMAGE FROM CACHE \(url)")
             return
         }
-        
         // from network and add to cache
         NetworkManager.shared.fetchImage(from: url) { data, response in
             self.image = UIImage(data: data)
             self.saveDataToCache(with: data, and: response)
+            print("IMAGE FROM NETWORK ADD TO CACHE \(response.url!)")
         }
     }
-    
+        
     private func saveDataToCache(with data: Data, and response: URLResponse) {
         guard let url = response.url else { return }
         let request = URLRequest(url: url)
