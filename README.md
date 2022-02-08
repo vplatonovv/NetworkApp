@@ -15,6 +15,3 @@ Simple network app
 - верстка кодом
 
 ![hippo](https://media.giphy.com/media/ZBJ0kCKQrZamWUsQAf/giphy.gif) ![hippo](https://media.giphy.com/media/uxSN0IDLeij2xMntJX/giphy.gif)
-
-
-Проект тестовый, будет периодически обновляться пока это возможно.
